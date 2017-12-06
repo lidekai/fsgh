@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd ">
+
+	<persistence-unit name="AppProductPersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="hibernate.dialect" value="com.kington.fshg.common.KTMySQL5Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.generate_statistics" value="true" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.max_fetch_depth" value="20" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.EhCacheProvider" />
+			<property name="hibernate.cache.use_second_level_cache"
+				value="true" />
+			<property name="hibernate.cache.use_query_cache" value="false" />
+
+		</properties>
+	</persistence-unit>
+</persistence>

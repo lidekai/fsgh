@@ -1,0 +1,98 @@
+/* 
+ *@名称: base.css
+ *@功能: 重设浏览器默认样式
+ *@作者: jt-Lis
+ *@版本: v1.0
+ *@时间: 2012-12-10
+ */
+@charset "utf-8";
+
+/*
+  @重置css
+*/
+html { color:#000; background:#fff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body, h1, h2, h3, h4, h5, h6, div, p, ul, ol, li, form, img, dl, dt, dd, table, th, td, blockquote, fieldset, strong, label, em, pre, code, input, button, textarea, address { margin: 0; padding: 0; }
+body { font: 12px/1.5 arial, \5b8b\4f53; text-align: center; direction: ltr;}
+a { text-decoration: none; outline: none;}
+p, dt, li { text-align: left; }
+li { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 500; }
+img, input, fieldset { border: 0; }
+input, textarea, img { vertical-align: middle; }
+:focus { outline: none; }   /* webkit hack */
+a:active { background-color: transparent\0; }     /* IE10 hack */
+input, textarea, button, select { font-size: 12px;}
+textarea { overflow: auto; vertical-align: top; }
+address, code, em { font-style:normal; font-weight: normal; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+abbr { border: 0; font-variant: normal; }
+del { text-decoration: line-through; }
+
+/*
+  @全局定义CSS
+*/
+.clear:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clear { *zoom: 1; overflow:hidden; }
+.overHide { overflow: hidden;}
+.hide { display: none; }
+.show { display: show; }
+.inline { display: inline; }
+.floatL { float: left; }
+.floatR { float: right; }
+.center { margin-left: auto; margin-right: auto; }
+.m10 { margin: 10px;}
+.mT5 { margin-top: 5px; }
+.mT10 { margin-top: 10px; }
+.mT15 { margin-top: 15px; }
+.mT20 { margin-top: 20px; }
+.mT30 { margin-top: 30px; }
+.mL5 { margin-left: 5px; }
+.mL10 { margin-left: 10px; }
+.mL15 { margin-left: 15px; }
+.mL20 { margin-left: 20px; }
+.mL30 { margin-left: 30px; }
+.mR5 { margin-right: 5px; }
+.mR10 { margin-right: 10px; }
+.mR15 { margin-right: 15px; }
+.mR20 { margin-right: 20px; }
+.mR30 { margin-right: 30px; }
+.mB5 { margin-bottom: 5px; }
+.mB10 { margin-bottom: 10px; }
+.mB15 { margin-bottom: 15px; }
+.mB20 { margin-bottom: 20px; }
+.mB30 { margin-bottom: 30px; }
+.p0 { padding: 0; }
+.p1 { padding: 1px; }
+.p10 { padding: 10px; }
+.pT5 { padding-top: 5px;}
+.pT10 { padding-top: 10px; }
+.pT15 { padding-top: 15px; }
+.pT20 { padding-top: 20px; }
+.pT30 { padding-top: 30px; }
+.pL5 { padding-left: 5px; }
+.pL10 { padding-left: 10px; }
+.pL15 { padding-left: 15px; }
+.pL20 { padding-left: 20px; }
+.pL30 { padding-left: 30px; }
+.pL30 { padding-left: 30px; }
+.pR5 { padding-right: 5px; }
+.pR10 { padding-right: 10px; }
+.pR15 { padding-right: 15px; }
+.pR20 { padding-right: 20px; }
+.pR30 { padding-right: 30px; }
+.pB5 { padding-bottom: 5px; }
+.pB10 { padding-bottom: 10px; }
+.pB15 { padding-bottom: 15px; }
+.pB20 { padding-bottom: 20px; }
+.pB30 { padding-bottom: 30px; }
+.tLeft { text-align: left; }
+.tCenter { text-align: center; }
+.tRight { text-align: right; }
+.f14 { font-size: 14px; }
+.t2 { text-indent: 2em; }
+.w100 { width: 100px; }
+.w150 { width: 150px; }
+.w200 { width: 200px; }

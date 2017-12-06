@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-2.5.xsd  
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+	default-lazy-init="true">
+
+	<!-- 用户 -->
+	<bean id="userService" class="com.kington.fshg.service.system.UserServiceImpl"></bean>
+
+	<!-- 角色 -->
+	<bean id="roleService" class="com.kington.fshg.service.system.RoleServiceImpl"
+		init-method="loadPath" lazy-init="false"></bean>
+
+	<!-- 字典 -->
+	<bean id="dictService" class="com.kington.fshg.service.system.DictServiceImpl"></bean>
+	
+	<!-- 附件-->
+	<bean id="attachService" class="com.kington.fshg.service.system.AttachServiceImpl"></bean>
+
+	<!-- 菜单 -->
+	<bean id="functionService" class="com.kington.fshg.service.system.FunctionServiceImpl"></bean>
+
+	<!-- 日志 -->
+	<bean id="logService" class="com.kington.fshg.service.system.LogServiceImpl"></bean>
+
+	<!-- 登录信息表 -->
+	<bean id="loginUserService" class="com.kington.fshg.service.system.LoginUserServiceImpl"></bean>
+	<bean id="seqService" class="com.kington.fshg.service.system.SeqServiceImpl"></bean>
+
+	<!-- 客户管理 -->
+	<bean id="customService" class="com.kington.fshg.service.info.CustomServiceImpl"></bean>
+
+	<!-- 客户产品 -->
+	<bean id="customProductService" class="com.kington.fshg.service.info.CustomProductServiceImpl"></bean>
+
+	<!-- 客户类型 -->
+	<bean id="customsTypeService" class="com.kington.fshg.service.info.CustomsTypeServiceImpl"></bean>
+
+	<!-- 产品管理 -->
+	<bean id="productService" class="com.kington.fshg.service.info.ProductServiceImpl"></bean>
+
+	<!-- 产品分类管理 -->
+	<bean id="productTypeService" class="com.kington.fshg.service.info.ProductTypeServiceImpl"></bean>
+
+	<!-- 门店信息 -->
+	<bean id="storeService" class="com.kington.fshg.service.info.StoreServiceImpl"></bean>
+
+	<!-- 促销员信息管理 -->
+	<bean id="promotersService" class="com.kington.fshg.service.info.PromotersServiceImpl"></bean>
+
+	<!-- 地区 -->
+	<bean id="areaService" class="com.kington.fshg.service.info.AreaServiceImpl"></bean>
+
+
+	<!-- 合同内条款设置 -->
+	<bean id="inFeeProvisionService"
+		class="com.kington.fshg.service.budget.InFeeProvisionServiceImpl"></bean>
+
+	<!-- 合同外费用预提项目 -->
+	<bean id="provisionProjectService"
+		class="com.kington.fshg.service.budget.ProvisionProjectServiceImpl"></bean>
+
+	<!-- 销售订单 -->
+	<bean id="saleOrderService" class="com.kington.fshg.service.order.SaleOrderServiceImpl"></bean>
+
+	<!-- 合同外费用预提 -->
+	<bean id="outFeeProvisionService"
+		class="com.kington.fshg.service.budget.OutFeeProvisionServiceImpl"></bean>
+
+	<!-- 合同外产品预提管理 -->
+	<bean id="provisionProductDetailService"
+		class="com.kington.fshg.service.budget.ProvisionProductDetailServiceImpl"></bean>
+
+	<!-- 合同内预提条款 -->
+	<bean id="inFeeClauseService" class="com.kington.fshg.service.budget.InFeeClauseServiceImpl"></bean>
+
+	<!-- 发货订单 -->
+	<bean id="deliverOrderService" class="com.kington.fshg.service.order.DeliverOrderServiceImpl"></bean>
+
+	<!-- 仓库调拨单 -->
+	<bean id="transferService" class="com.kington.fshg.service.order.TransferServiceImpl"></bean>
+
+	<!-- 合同内费用核销 -->
+	<bean id="inFeeVerificationService"
+		class="com.kington.fshg.service.charge.InFeeVerificationServiceImpl"></bean>
+
+	<!-- 物流费用 -->
+	<bean id="logisticService" class="com.kington.fshg.service.logistic.LogisticServiceImpl"></bean>
+
+	<!-- 其他物流费用 -->
+	<bean id="otherLogisticsService"
+		class="com.kington.fshg.service.logistic.OtherLogisticsServiceImpl"></bean>
+
+	<!-- 合同外费用核销 -->
+	<bean id="outFeeVerificationService"
+		class="com.kington.fshg.service.charge.OutFeeVerificationServiceImpl"></bean>
+
+	<!-- 合同外费用核销产品明细 -->
+	<bean id="verificationProductDetailService"
+		class="com.kington.fshg.service.charge.VerificationProductDetailServiceImpl"></bean>
+
+	<!-- 门店产品信息 -->
+	<bean id="storeProductService" class="com.kington.fshg.service.info.StoreProductServiceImpl"></bean>
+	
+	<!-- 销售发票 -->
+	<bean id="saleBillService" class="com.kington.fshg.service.order.SaleBillServiceImpl"></bean>
+	
+	<!-- 门店产品库存信息-->
+	<bean id="storeProductStockService" class="com.kington.fshg.service.info.StoreProductStockServiceImpl"></bean>
+	
+	<!-- 门店产品销售信息-->
+	<bean id="storeProductSaleService" class="com.kington.fshg.service.info.StoreProductSaleServiceImpl"></bean>
+	
+	<!-- 门店产品销售信息-->
+	<bean id="storeSaleProService" class="com.kington.fshg.service.budget.StoreSaleProServiceImpl"></bean>
+	
+	<!-- 销售订单管理-->
+	<bean id="saleOrderU8Service" class="com.kington.fshg.service.sale.SaleOrderU8ServiceImpl"></bean>
+	
+	<!-- 应收单管理-->
+	<bean id="receiveBillService" class="com.kington.fshg.service.account.ReceiveBillServiceImpl"></bean>
+	
+	<!-- 收款单管理-->
+	<bean id="receiptBillService" class="com.kington.fshg.service.account.ReceiptBillServiceImpl"></bean>
+	
+	<!-- 待核单管理-->
+	<bean id="checkBillService" class="com.kington.fshg.service.account.CheckBillServiceImpl"></bean>
+	
+	<!-- 核销记录-->
+	<bean id="checkRecordService" class="com.kington.fshg.service.account.CheckRecordServiceImpl"></bean>
+	
+</beans>
+

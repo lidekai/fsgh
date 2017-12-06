@@ -1,0 +1,142 @@
+/* 
+ *@鍚嶇О: main.css
+ *@鍔熻兘: 鍐呭椤甸潰鏍峰紡
+ *@浣滆�: kish
+ *@鐗堟湰: v2.0
+ *@鏃堕棿: 2013-12-14
+ */
+@charset "utf-8";
+html, body { height: 100%; font-size: 12px;}
+.jt-container { position: relative; width: 100%; height: 100%;}
+/* jt- nav 褰撳墠浣嶇疆*/
+.jt-nav { padding-left: 5px; height: 38px; line-height: 38px; font-size: 16px; border-bottom: 1px solid #d7e5e8; text-align: left; background: #edf6fb;}
+.jt-nav span, .jt-nav a { padding: 0 5px; color: #000; font: normal 12px/38px Microsoft Yahei;}
+/**/
+.container-fluid { padding: 20px;}
+/*.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 { margin-bottom: 5px;}*/
+.span-border { border: 1px solid #d4dada; padding: 0 20px;}/*妯″潡杈规*/
+h5 { padding-bottom: 3px; border-bottom: 1px solid #cde0e6;}/*妯″潡鏍囬*/
+ul, li { list-style: none;}
+p { text-indent: 2em;}
+p span { text-indent: 0;}/*鏍囩*/
+a { outline: none; blr: expression(this.onFocus=this.blur());}
+a:focus { outline: none;}
+
+/**/
+.label, .badge { font-size: 12px; font-weight: normal;}/*鏍囩*/
+.table thead th, .table thead td { background: #F0F5F8;}
+.table-hover tbody tr:hover > th, .table-hover tbody tr:hover > td { background: #fde5dd;}/*榧犳爣缁忚繃琛ㄦ牸琛岃儗鏅壊*/
+
+.table th, .table td { text-align: center; }
+
+
+/*姘村钩琛ㄥ崟瑕嗗啓*/
+label, input, button, select, textarea { font-size: 15px;}
+select,textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input{ font-size: 14px;}
+form span { padding-left: 10px; font-size: 15px; color: red;}/*琛ㄥ崟鏄熷彿鎻愮ず*/
+form h5 span { padding: 0 0 3px; border-bottom: 3px solid #66C9F3; color: #000;}/*妯″潡鏍囬*/
+form img { margin-left: 10px;}/*鐢ㄦ埛鐧诲綍楠岃瘉鐮佸浘鐗�/
+
+/*琛屽唴琛ㄥ崟瑕嗗啓*/
+.form-inline label { margin-right: 5px;}
+.form-inline ul.row-fluid { margin: 0 0 20px; padding: 10px; width: auto; border: 1px solid #d4dada;}
+.form-inline ul.row-fluid li { float: left; padding: 10px 20px 5px 0;}
+
+/*鎸夐挳瑕嗗啓*/
+.btn { padding: 4px 30px; margin: 0 1px;}
+.btn-mini { padding: 0 6px;}
+.btn-small { padding: 2px 10px;}
+.btn-large { padding: 11px 19px;}
+.form-inline .span80 { width: 80px;}
+.form-inline .span120 { width: 120px;}
+.form-inline .span150 { width: 150px;}
+.form-inline .span180 { width: 180px;}
+.uneditable-input { padding: 4px 30px; width: auto; font-size: 14px; text-align: center; background: #f1f1f1;}
+
+/**/
+.alert .close { top: -1px; *top: -7px;}
+
+.welcome { background: url("../images/welcome-pic.jpg") #fff center no-repeat;}
+
+.kids { padding:10px; font-size:14px; border:1px solid #d5d5d5}
+.kids label{ float:left; padding:3px 10px; margin:5px; color:#999}
+.kids a{ float:left; padding:3px 10px; margin:5px; border:1px solid #d5d5d5; border-radius:3px; text-decoration:none; color:#333}
+.kids a:hover{ background:#056ea8; color:#FFF}
+.kids a[class="curr"]{background:#056ea8; color:#FFF}
+.kids button { float:right; margin:3px 10px;}
+
+.msg_left { margin-right:300px; height:100%; border:1px solid #82accc;background:#fff url(../images/user_left_bg.gif) repeat-y left; position:relative;}
+.msg_right { float:right; width:280px; padding:5px;  height:100%; border:1px solid #82accc}
+
+.main_tabs{ height:33px; float:left; width:180px; border-right:none; }
+.main_tabs li{float:left;display:block;cursor:pointer;text-align:left;width:159px;line-height:22px;color:#323232;color:#5b6b78;border-right:1px solid #d7e7e7;border-bottom:1px solid  #e0f0fd; padding:10px;}
+.main_tabs li.hover{background:#fff; color:#010101;border-bottom:1px solid  #d9e4e6; border-right:1px solid #fff}
+.tabs_con { margin-left:180px;}
+.service_bg {background: url(../images/service_pic.jpg) no-repeat left bottom; position:absolute; left:0px; bottom:0px; height:200px; }
+.service_bg p{ margin-top:35px; margin-left:76px; width:90px; height:65px; text-indent:0px; line-height:18px; color:#666 }
+
+.msg_wrap {padding:20px;}
+.user_left { display:block; margin-right:20px; text-align:left;}
+.user_left .user_title { color:#006bfa;}
+.user_left .user_title span{ color:#999; margin-left:10px;}
+.user_left .user_box { float:left; border-radius:5px; border:1px solid #97c5e7; border-bottom:3px solid #3f8bab; padding:8px; margin-top:8px;background: url("../images/msg_bg.gif") repeat-x bottom #e4f1f7; position:relative }
+.user_left .user_box i{ position:absolute; left:10px; top:-5px; width:8px; height:6px; display:block;  background: url("../images/msg_arr1.gif") no-repeat }
+.user_left .user_box .user_con{ padding:5px; background:#fff;}
+.user_left .user_box .user_con .top_w{ }
+.user_left .user_box .user_con .top_w img{ float:left; margin-right:5px;}
+.user_left .user_box .user_con .top_w .tit{ float:left}
+.user_left .user_box .user_con .top_w .tit p{ text-indent:0em; color:#999}
+.user_left .user_box .user_con .btm_w { border-top:1px solid #ecf5fc; text-align:right;}
+.user_left .user_box .user_con .btm_w a{ margin:5px;}
+
+.user_right { display:block; margin-left:20px; text-align:right}
+.user_right .user_title { color:#6e9700;}
+.user_right .user_title span{ color:#999; margin-left:10px;}
+.user_right .user_box { float:right; border-radius:5px; border:1px solid #d9e895; border-bottom:3px solid #aac46d; padding:8px; margin-top:8px;background: url("../images/msg_bg2.gif") repeat-x bottom #f3f8e4; position:relative }
+.user_right .user_box i{ position:absolute; right:10px; top:-5px; width:8px; height:6px; display:block;  background: url("../images/msg_arr2.gif") no-repeat }
+.user_right .user_box .user_con{ padding:5px; background:#fff;}
+.user_right .user_box .user_con .top_w{ }
+.user_right .user_box .user_con .top_w img{ float:right; margin-left:5px;}
+.user_right .user_box .user_con .top_w .tit{ float:left}
+.user_right .user_box .user_con .top_w .tit p{ text-indent:0em; color:#999}
+.user_right .user_box .user_con .btm_w { border-top:1px solid #ecf5fc; text-align:right;}
+.user_right .user_box .user_con .btm_w a{ margin:5px;}
+
+.user_input { background:#c8e2f6; padding:10px 110px 10px 10px; height:50px; position:relative }
+.user_input textarea{ width:100%; float:left; margin-right:100px; height:45px }
+.user_input button{ position:absolute; top:10px; right:10px; }
+
+
+
+.ann_box { background:#fff8eb; border:1px solid #dcdcdc; padding:5px; color:#777; font-size:14px; margin-bottom:10px}
+.ann_box span{ color:#333}
+.ann_box b{ color:#ff7d02; font-weight:bold; font-size:16px;}
+
+.wel_box li { width:25%; float:left;}
+.wel_box div { height:140px;}
+.wel_box span{ float:right; font-size:30px; margin-top:60px; margin-right:20px; font-weight:bold; color:#fff} 
+.wel_box p{ display:block; line-height:30px; text-indent:0em; text-align:center; width:100%; position:absolute; bottom:-20px; left:0px;  color:#fff; font-size:14px; font-weight:bold }
+
+.wel_box .blue_box { background: url("../images/ico_comp.png") #27a9e3 no-repeat 10px center; position:relative; margin:10px; margin-left:0px;  }
+.wel_box .blue_box p{ background:#2195c9;}
+
+.wel_box .green_box { background: url("../images/ico_right.png") #28b779 no-repeat 10px center; position:relative; margin:10px;  }
+.wel_box .green_box p{ background:#17a668;}
+
+.wel_box .yellow_box { background: url("../images/ico_no.png") #ffb848 no-repeat 10px center; position:relative; margin:10px; }
+.wel_box .yellow_box p{ background:#da9627;}
+
+.wel_box .purple_box { background: url("../images/ico_wrong.png") #852b99 no-repeat 10px center; position:relative; margin:10px; margin-right:0px;  }
+.wel_box .purple_box p{ background:#741d88;}
+
+.main_table{ margin-top:20px; border:1px solid #c5d9e7}
+.main_table th{ padding:10px; background:#27a9e3; color:#FFF; font-size:16px; }
+.main_table td{ padding:10px; font-size:14px;  }
+.main_table p{ text-indent:0em; color:#888; margin-top:5px;}
+.main_table a{ color:#2294c9}
+.main_table th a{ color:#FFF; font-size:14px; font-weight:normal}
+.main_table .red_f{ color:#ff7f03}
+.main_table .green_f{ color:#28b779}
+.main_table .gray_bg{ background:#f2f2f2}
+
+.left_kh { width:157px; height:180px; display:block; background:url("../images/kh.jpg") no-repeat ; position:absolute; top:50px ;left:10px; }

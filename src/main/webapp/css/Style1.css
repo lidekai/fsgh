@@ -1,0 +1,14 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; list-style:none;}
+body{margin:0; padding:0; font-family:"宋体"; font-size:14px; color:#3c3d43;  /*background:url(../imges/Watermark.png) right no-repeat;*/}
+a:link{ text-decoration:none;}
+/*轮播图片的样式*/
+.teacher{width:700px; height:218px; margin:0 auto;position:relative; float: left;}
+.teach_top{width:120px; height:100px; float:right; margin-top:7px; margin-right:24px;}
+.teach_top p{ color:#fff; font-weight:bold; text-align:center;}
+.Teac{width:700px; height:218px; position:absolute; margin-left:30px;}
+.Teac ul li:hover{}
+.Teac ul li{ float:left; width:160px; height:200px;margin-top: 9px}
+.Zzhao img{width:160px; height:200px; filter:alpha(opacity=100); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; border:1; list-style:none;}
+.Zzhao_cent img{width:160px; height:200px; border:1; list-style:none;}

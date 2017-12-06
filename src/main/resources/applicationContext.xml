@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-2.5.xsd  
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+	default-lazy-init="true">
+
+	<!-- | properties属性配置文件(多个使用逗号分隔). -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<bean id="contextUtil" class="com.kington.fshg.common.MyApplicationContextUtil"
+		lazy-init="false"></bean>
+	<!-- | JPA注解配置，可以直接在DAO层中使用@PersistenceContext注解注入EntityManager -->
+	<bean id="pabpp"
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	<!-- | 通用注解，可以使用@Resource、@PostConstruct、@PreDestroy这些注解 | @Resource 注入对应的bean(bean必须在XML文件中定义) 
+		| @PostConstruct bean初始化的回调方法注解，注解在方法上 | @PreDestroy bean销毁的回调方法注解，注解在方法上 -->
+	<bean id="cabpp"
+		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${jdbc.driver}" />
+		<property name="jdbcUrl">
+			<value><![CDATA[${jdbc.url}]]></value>
+		</property>
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="minPoolSize" value="${jdbc.minPoolSize}" />
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
+		<property name="initialPoolSize" value="${jdbc.initialPoolSize}" />
+		<property name="maxIdleTime" value="${jdbc.maxIdleTime}" />
+		<property name="acquireIncrement" value="${jdbc.acquireIncrement}" />
+
+		<property name="idleConnectionTestPeriod">
+			<value>60</value>
+		</property>
+	</bean>
+
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+		destroy-method="destroy">
+		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceXmlLocation" value="classpath*:META-INF/persistence.xml" />
+		<property name="persistenceUnitName" value="AppProductPersistenceUnit"></property>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<!-- | 使用基于注解的事务控制，在需要事务的类或方法上使用@Transactional进行控制 -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+
+	<!-- | AOP方式的事务配置，主要针对Service处理类.所有get方法使用只读事务控制，其他默认事务控制. | 所有的业务类的名称必须以ServiceImpl结束才可以使用事务配置功能！ -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="*" rollback-for="java.lang.Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:advisor id="managerTx" advice-ref="txAdvice"
+			pointcut="execution(* com.kington..*.*ServiceImpl.*(..))" />
+	</aop:config>
+
+</beans>
